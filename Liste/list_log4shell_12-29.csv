@@ -3975,8 +3975,8 @@ Palantir;AI Inference Platform (AIP);All;Not vuln;Fix;;;Fully remediated as of 1
 Palantir;Apollo;All;Not vuln;Not vuln;Not vuln;Not vuln;No impact, and updates have been deployed for full remediation.;['https://www.palantir.com/security-advisories/log4j-vulnerability/'];2021-12-29
 Palantir;Foundry;All;Not vuln;Fix;;;No impact to Palantir-hosted or Apollo-connected instances, and updates have been deployed for full remediation. Disconnected customer instances may require manual updates.;['https://www.palantir.com/security-advisories/log4j-vulnerability/'];2021-12-29
 Palantir;Gotham;All;Not vuln;Fix;;;No impact to Palantir-hosted or Apollo-connected instances, and updates have been deployed for full remediation. Disconnected customer instances may require manual updates.;['https://www.palantir.com/security-advisories/log4j-vulnerability/'];2021-12-29
-Palo-Alto Networks;-OS for Firewall and Wildfire;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://security.paloaltonetworks.com/CVE-2021-44228'];2021-12-29
-Palo-Alto Networks;-OS for Panorama;9.0.15, 9.1.12-h3, 10.0.8-h8;Not vuln;Fix;;;;['https://security.paloaltonetworks.com/CVE-2021-44228'];2021-12-29
+Palo-Alto Networks;#NOM?;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://security.paloaltonetworks.com/CVE-2021-44228'];2021-12-29
+Palo-Alto Networks;#NOM?;9.0.15, 9.1.12-h3, 10.0.8-h8;Not vuln;Fix;;;;['https://security.paloaltonetworks.com/CVE-2021-44228'];2021-12-29
 Palo-Alto Networks;Bridgecrew;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://security.paloaltonetworks.com/CVE-2021-44228'];2021-12-29
 Palo-Alto Networks;CloudGenix;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://security.paloaltonetworks.com/CVE-2021-44228'];2021-12-29
 Palo-Alto Networks;Cortex Data Lake;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://security.paloaltonetworks.com/CVE-2021-44228'];2021-12-29
