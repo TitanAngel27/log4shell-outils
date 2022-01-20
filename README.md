@@ -11,8 +11,7 @@ pip install -r requirements.txt
 ## Utilisation
 **softwarelist_parser.py**
 ```bash
-py softwarelist_parser.py #Windows
-python softwarelist_parser.py #Linux
+py softwarelist_parser.py
 ```
 Description: \
 Télécharge les 27 dernières listes publiées puis met le tout en format csv dans le dossier Liste sous le format _list_log4shell_mm-jj_. \
@@ -20,10 +19,8 @@ Télécharge les 27 dernières listes publiées puis met le tout en format csv d
 
 **softwarelist_compare.py**
 ```bash
-py softwarelist_compare.py #Windows
-python softwarelist_compare.py #Linux
+py softwarelist_compare.py #Par default, on va comparer la date de hier et d'aujourd'hui
+py softwarelist_compare.py --date_1 1-10 --date_2 1-11 #Si on compare le 10 et le 11 janvier
 ```
 Description: \
-Compare la liste du jour et la liste de la journée d'avant, puis créer un fichier texte dans le dossier Resultat sous le format _Resultat_mm-jj_. Pour l'instant les fichiers donnent plus d'informations que nécessaire (À changer et/ou automatiser). Les parties importantes sont : \
--Sample Rows with Unequal Values: Les lignes qui sont différentes (avec ce qui a changé) \
--Sample Rows Only in df2: Les lignes qui ont été ajoutées
+Compare la liste du jour et la comparaison de la journée d'avant, puis créer un fichier texte dans le dossier Resultat sous le format _Resultat_mm-jj_ avec la 2e date (mm-jj) utilisé lors de la comparaison.
