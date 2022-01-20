@@ -63,6 +63,7 @@ else:
 #Verifie si les fichiers souhaites existes
 try: 
     dfHier = pd.read_csv(listeHier, sep=';',header=0,encoding_errors='ignore')
+    del dfHier['Unnamed: 0'] #Supprime l'index pour eviter les doublons
     dfHier_NonDate = dfHier[HEADERS_SD].copy()#Supprime la date sinon toute les lignes sont différentes
 
 except (FileNotFoundError):
