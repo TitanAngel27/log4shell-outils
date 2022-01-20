@@ -1,0 +1,22 @@
+;Supplier;Product;Version;Status CVE-2021-4104;Status CVE-2021-44228;Status CVE-2021-45046;Status CVE-2021-45105;Notes;Links;Note;Date MAJ
+4803;Trend Micro;Deep Discovery Director;5.3 CP B1228, 5.2 CP B1400;Not vuln;Fix;Fix;Fix;5.3 CP1228 replaces the previous B1225.  Customers may upgrade from any 5.3 build 1225 or below to the latest CP1228. Please note that all versions of Trend Micro Deep Discovery Director 5.1 SP1 and below have officially reached End-of-Life (EOL) and no patch will be made available.;['https://success.trendmicro.com/solution/000290055'];Modification;2022-01-20
+5664;Aruba Networks;IntroSpect;versions 2.5.0.0 to 2.5.0.6;;Fix;;;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5665;Aruba Networks;AirWave Management Platform;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5666;Aruba Networks;Analytics and Location Engine;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5667;Aruba Networks;ArubaOS Wi-Fi Controllers and Gateways;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5668;Aruba Networks;ArubaOS SD-WAN Gateways;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5669;Aruba Networks;ArubasOS-CX Switches;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5670;Aruba Networks;ArubasOS-S Switches;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5671;Aruba Networks;Central / Central On-Premises;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5672;Aruba Networks;ClearPass Policy Manager;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5673;Aruba Networks;EdgeConnect;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5674;Aruba Networks;Fabric Composer (AFC) and Plexxi Composable Fabrice Manager (CFM);;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5675;Aruba Networks;HP ProCurve Switches;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5676;Aruba Networks;Instant / Instant Access Points;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5677;Aruba Networks;Instant On;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5678;Aruba Networks;Legacy GMS products;All;Fix;Fix;Fix;;;['https://www.arubanetworks.com/website/techdocs/sdwan/docs/advisories/media/security_advisory_notice_apache_log4j2_cve_2021_44228.pdf'];Ajout;2022-01-20
+5679;Aruba Networks;Legacy NX, VX, VRX;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5680;Aruba Networks;NetEdit;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5681;Aruba Networks;Silver Peak Orchestrator;All;Fix;Fix;Fix;;;['https://www.arubanetworks.com/website/techdocs/sdwan/docs/advisories/media/security_advisory_notice_apache_log4j2_cve_2021_44228.pdf'];Ajout;2022-01-20
+5682;Aruba Networks;User Experience Insight (UXI);;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20
+5683;Aruba Networks;VIA Clients;;Not vuln;Not vuln;Not vuln;Not vuln;;['https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2021-019.txt'];Ajout;2022-01-20

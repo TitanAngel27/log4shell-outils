@@ -39,8 +39,9 @@ HEADERS_SD = [
 parser = argparse.ArgumentParser(description="Comparer 2 liste et sortir les différences. Par default, la liste de hier et d'aujourd'hui")
 
 # Par default: Date de hier et d'aujourd'hui
-parser.add_argument("--date_1", help="Le mois et le jour de la 1re liste à comparer. Ex: 4-21 ", default="0-0")
-parser.add_argument("--date_2", help="Le mois et le jour de la 2e liste à comparer. Ex: 12-1 ", default="0-0")
+parser.add_argument("--date_1", help="Le mois et le jour de la 1re liste à comparer. Ex: 4-21. \n Par default, la date de hier. ", default="0-0")
+parser.add_argument("--date_2", help="Le mois et le jour de la 2e liste à comparer. Ex: 12-1. \n Par default, la date d'aujourd'hui ", default="0-0")
+parser.add_argument("--mode", help="Le mode de comparaison, 0 ou 1. \n Par default, le mode est 0. Le mode 1 ajoute en sortie un fichier CSV avec les modifications seulements.", default='0')
 #TO-DO
 #  -- Mode pour fichier Changement.csv supplémentaire
 
@@ -119,19 +120,49 @@ df_rightOnly.rename(columns={'supplier': HEADERS[0],
                     'notes':HEADERS[7],
                     'links':HEADERS[8]},inplace = True)
 
-# Fusion des lignes modifies et ajoutes
-df_resultAjout = pd.concat([df_mismatch,df_rightOnly])
-
 # Date de modification
 if(args.date_2 == "0-0"):
     date2Jour = current_day
 else:
     date2Jour = args.date_2
 
+#Mode 1 avec creation d'un autre CSV  
+if(args.mode == '1'):
+    #mise en place pour ajout de la colonnes Note
+    mismatch_copy = df_mismatch.copy()
+    Note_Modif = ['Modification']*len(mismatch_copy.index)
+    mismatch_copy['Note'] = Note_Modif
+
+    rightOnly_copy = df_rightOnly.copy()
+    Note_Ajout = ['Ajout']*len(rightOnly_copy.index)
+    rightOnly_copy['Note'] = Note_Ajout
+    
+    #Fusion
+    df_fusionModif = pd.concat([mismatch_copy,rightOnly_copy])
+
+    #mise en place pour ajout de la Date
+    l_Date = [date2Jour]*len(df_fusionModif.index)
+    df_fusionModif['Date MAJ'] = l_Date
+
+    #Nom du fichier
+    if(args.date_2 == "0-0"):
+        nomFichierMode1 = '.\Resume\list_log4shell_resume_'+str(current_day.month)+'-'+str(current_day.day)+'.csv'
+    else:
+        nomFichierMode1 = '.\Resume\list_log4shell_resume_'+args.date_2+'.csv'
+
+    #Creation du CSV si non vide
+    df_fusionModif.to_csv(
+        nomFichierMode1,
+        sep=';',
+        index=True,
+        encoding='UTF-8',)
+
+# Fusion des lignes modifies et ajoutes
+df_resultAjout = pd.concat([df_mismatch,df_rightOnly])
+
+
 # Ajout de la colonne Date Maj avec la date de modification
-listeDate = []
-for x in range(len(df_resultAjout.index)):
-    listeDate.append(date2Jour)
+listeDate = [date2Jour]*len(df_resultAjout.index)
 df_resultAjout['Date MAJ'] = listeDate
 
 # Supprimer les lignes qui ne sont plus a jour
@@ -143,8 +174,10 @@ df_Resultat = pd.concat([dfHier, df_resultAjout])
 # Nom du fichier de comparaison
 if(args.date_2 == "0-0"):
     nomFichierResultat = '.\Resultat\list_log4shell_comparaison_'+str(current_day.month)+'-'+str(current_day.day)+'.csv'
+    nomFichierMode1 = '.\Resume\list_log4shell_resume_'+str(current_day.month)+'-'+str(current_day.day)+'.csv'
 else:
     nomFichierResultat = '.\Resultat\list_log4shell_comparaison_'+args.date_2+'.csv'
+    nomFichierMode1 = '.\Resume\list_log4shell_resume_'+args.date_2+'.csv'
 
 # Creation du CSV 
 df_Resultat.to_csv(
